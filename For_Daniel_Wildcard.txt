@@ -1,0 +1,50 @@
+  767  cd Homework_data/
+  768  ls
+  769  cd data-shell/
+  770  ls
+  771  cd data
+  772  ls
+  773  ls $HOME
+  774  ls 
+  775  cd $HOME
+  776  ls
+  777  git clone https://bitbucket.org/AllesinaLab/introscicomp2014.git
+  778  cd IntroSciComp2014
+  779  cd UNIX
+  780  ls
+  781  cd introscicomp2014
+  782  ls
+  783  cd UNIX
+  784  ls
+  785  cd Sandbox
+  786  pwd
+  787  ls
+  788  touch TestFile
+  789  mv TestFile Testfile2
+  790  rm TestFile2
+  791  rm Testfile2
+  792  mkdir TestDirectory
+  793  touch TestDirectory/Test.txt
+  794  rmdir TestDirectory
+  795  rm TestDirectory/test.txtrmdir TestDirectory
+  796  rmdir TestDirectory
+  797  echo "My first line." > test.txt
+  798  cat test.txt
+  799  echo "My second line" >> test.txt
+  800  ls / >> ListRootDir.txt
+  801  cat ListRootDir.txt
+  802  mkdir TestWild
+  803  cd TestWild
+  804  touch File1.txt
+  805  touch File2.txt
+  806  touch File3.txt
+  807  touch File4.txt
+  808  touch File1.csv
+  809  touch File2.csv
+  810  touch File3.csv
+  811  touch File4.csv
+  812  touch Anotherfile.csv
+  813  touch Anotherfile.txt
+  814  ls
+  815  ls | wc -l
+  816  history | tail -n 50 > For_Daniel_Wildcard.txt

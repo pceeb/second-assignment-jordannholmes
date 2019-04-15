@@ -1,0 +1,8 @@
+grep -r "evolution" otoos10_new.txt           0  Results
+grep -r "evolution" otoos10.txt               4  Results
+grep -r "evolved" otoos10_new.txt             0  Results
+grep -r "evolved" otoos10.txt                 1  Results
+grep -r "natural selection" otoos10_new.txt   0  Results
+grep -r "natural selection" otoos10.txt       Paragraph of Results
+grep -r "Wallace" otoos10_new.txt             0  Results
+grep -r "Wallace" otoos10.txt                 5  Results

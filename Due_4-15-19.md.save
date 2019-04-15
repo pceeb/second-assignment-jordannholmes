@@ -2,41 +2,41 @@
 
 ### Hoffman2
 
-1. What is the procedure for logging into Hoffman2?
-2. What is the first thing that you do once you login?  What is the command?
+1. What is the procedure for logging into Hoffman2? - For PC users, open a Secure Shell App through Google Chrome. Type in your username and network. Example: ssh c177-12@hoffman2.idre.ucla.edu. You will then be prompted to enter your password.
+2. What is the first thing that you do once you login?  What is the command? - Enter qrsh to get out of the login node and to join a more specific, individual node
 
 ___
 
 ### Using 'ls'
 
-1. You can use two flags at the same time. What does the command ls do when used with the -l flag? What about if you use both the -l and the -h flag?
+1. You can use two flags at the same time. What does the command ls do when used with the -l flag? What about if you use both the -l and the -h flag? - The ls -l flag, lists the lines within the directory or file including the root, date created, size of the file, and the name of the file, The flag ls -l -h indicates the number of print signs within a file or directory in a readable format, with large data condensed into shorter notations so it is easier to read.
 
-2. The command ls -R lists the contents of directories recursively, i.e., lists their sub-directories, sub-sub-directories, and so on at each level. The command ls -t lists things by time of last change, with most recently changed files or directories first. In what order does ls -R -t display things? Hint: ls -l uses a long listing format to view timestamps.
+2. The command ls -R lists the contents of directories recursively, i.e., lists their sub-directories, sub-sub-directories, and so on at each level. The command ls -t lists things by time of last change, with most recently changed files or directories first. In what order does ls -R -t display things? Hint: ls -l uses a long listing format to view timestamps. - ls -R -t lists things according to timestamp first, and then divides via each directory, sub-directory, sub-sub-directory (and so on) which are presented reversably based on their alphabetical name
 
 ---
 
 ### Shortcuts
 
-1. what is ~
-2. what is ../
-3. what is ./?
+1. what is ~ : Tilda, indicated the home directory
+2. what is ../ : Takes you back one previous directory
+3. what is ./? : Indicates the directory that you are currently working in
 
 4. Starting from /Users/amanda/data, which of the following commands could Amanda use to navigate to her home directory, which is /Users/amanda?  Indicate what each command does.
 ````
-$ cd .
-$ cd /
-$ cd /home/amanda
-$ cd ../..
-$ cd ~
-$ cd home
-$ cd ~/data/..
-$ cd
-$ cd ..
+$ cd . - Takes you to a directory named ., if applicable - Otherwise nothing
+$ cd / - Takes you to a directory named /, if applicable - Otherwise nothing
+$ cd /home/amanda - Takes you to the home directory, where she wants to be based on the question --CORRECT
+$ cd ../.. - Takes you to the class directory, if applicable in the individual's directory
+$ cd ~ - Takes you to the home directory, where she wants to be based on the question ---CORRECT
+$ cd home - Takes you to a directory named home, if applicable - Otherwise, nothing
+$ cd ~/data/..Takes you to a directory named .., if applicable - Otherwise nothing
+$ cd - Nothing by itself, cd is a command
+$ cd .. - Takes you to a directory named .., or home directory, if applicable
 ````
 ---
 ### File systems
 
-1. Using the filesystem diagram below, if pwd displays `/Users/thing`, what will `ls -F ../backup` display?
+1. Using the filesystem diagram below, if pwd displays `/Users/thing`, what will `ls -F ../backup` display? ---B
 
   a. `../backup: No such file or directory`
 
@@ -44,18 +44,18 @@ $ cd ..
 
   c. `2012-12-01/ 2013-01-08/ 2013-01-27/`
 
-  d. `original/ pnas_final/ pnas_sub/`
+  d. `original/ pnas_final/ pnas_sub/` ---CORRECT
 
 
 2. Using the filesystem diagram below, if pwd displays `/Users/backup`, and -r tells ls to display things in reverse order, what command(s) will result in the following output:
 
 ```
-pnas_sub/ pnas_final/ original/
+pnas_sub/ pnas_final/ original/  ---B
 ```
 
   a. `ls pwd`
 
-  b. `ls -r -F`
+  b. `ls -r -F` ---CORRECT
 
   c. `ls -r -F /Users/backup`
 
@@ -71,13 +71,13 @@ pnas_sub/ pnas_final/ original/
 ```
 $ touch my_file.txt
 ```
- What did the touch command do? When you look at your current directory using the GUI file explorer, does the file show up?
+What did the touch command do? When you look at your current directory using the GUI file explorer, does the file show up? - Touch creates a new file, yes the file is listed in the home directory
+ 
+Use 'ls -l' to inspect the files. How large is my_file.txt? - The file is 0, there is no content listed yet
 
- Use 'ls -l' to inspect the files. How large is my_file.txt?
+When might you want to create a file this way? - When you are in need of a file in the directory that you are directly in, do not add anything 
 
- When might you want to create a file this way?
-
- Can you use touch to edit my_file.txt?
+Can you use touch to edit my_file.txt? - No, touch only creates new files. In order to edit, you can use nano.
 
 2. We have seen the use of >, but there is a similar operator >> which works slightly differently. We’ll learn about the differences between these two operators by printing some strings. We can use the echo command to print strings e.g.
 
@@ -93,7 +93,7 @@ and:
 ```
 $ echo hello >> testfile02.txt
 ```
-What is the difference between > and >> ?
+What is the difference between > and >> ? - > Redirect output from a command to a file on disk. If the file already exists, it will be overwritten, » Appends the output from a command to a file on disk. If the file does not exist, it will be created.
 Hint: Try executing each command twice in a row and then examining the output files.
 
 3. We have already met the head command, which prints lines from the start of a file. tail is similar, but prints lines from the end of a file instead.
@@ -101,12 +101,13 @@ Hint: Try executing each command twice in a row and then examining the output fi
 Consider the file `/u/home/class/c177/c177-i0/classdata/Homework_data/data-shell/data/animals.txt`. After these commands, select the answer that corresponds to the file animals-subset.txt:
 
 ```
-$ head -n 3 animals.txt > animals-subset.txt
+$ head -n 3 animals.txt > animals-subset.txt ---A
 ```
 
 ```
-$ tail -n 2 animals.txt >> animals-subset.txt
+$ tail -n 2 animals.txt >> animals-subset.txt ---B
 ```
+--After both commands, D will be overall correct in what will be shown
 
   a. The first three lines of animals.txt
 
@@ -114,7 +115,7 @@ $ tail -n 2 animals.txt >> animals-subset.txt
 
   c. The first three lines and the last two lines of animals.txt
 
-  d. The second and third lines of animals.txt
+  d. The second and third lines of animals.txt ---D
 
 ---
 ### Copying, Moving and deleting files
@@ -130,22 +131,22 @@ $ cd raw/
 Fill in the blanks to move these files to the current folder (i.e., the one she is currently in):
 
 ```
-$ mv ___/sucrose.dat  ___/maltose.dat ___
-```
+$ mv ../analyzed/sucrose.dat ../analyzed/maltose.dat ./
+ ```
 
 2. Suppose that you created a plain-text file in your current directory to contain a list of the statistical tests you will need to do to analyze your data, and named it: statstics.txt
 
-After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so?
+After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so?  ---B
 
   a. `cp statstics.txt statistics.txt`
 
-  b. `mv statstics.txt statistics.txt`
+  b. `mv statstics.txt statistics.txt` ---CORRECT
 
   c. `mv statstics.txt .`
 
   d. `cp statstics.txt .`
 
-3. What is the output of the closing ls command in the sequence shown below?
+3. What is the output of the closing ls command in the sequence shown below?  ---D
 ```
 $ pwd
 /Users/jamie/data
@@ -158,20 +159,20 @@ $ ls
 ```
 
 a. `proteins-saved.dat recombine`
-b. `recombine`
+b. `recombine` ---CORRECT
 c. `proteins.dat recombine`
 d. `proteins-saved.dat`
 
 
-4. What happens when we execute `rm -i thesis_backup/quotations.txt`? Why would we want this protection when using rm?
+4. What happens when we execute `rm -i thesis_backup/quotations.txt`? Why would we want this protection when using rm? - The command rm -i deletes the file that follows, with a prompt that makes you confirm that you want to delete that particular file before it is gone forever. This is useful to avoid deleting something accidentally.
 
-5. In the example below, what does cp do when given several filenames and a directory name?
+5. In the example below, what does cp do when given several filenames and a directory name? -Copies the first text file listed into the second text file listed, then copies into the directory that was just made (in this case backup).
 ```
 $ mkdir backup
 $ cp amino-acids.txt animals.txt backup/
 ```
 
-6. In the example below, what does cp do when given three or more file names?
+6. In the example below, what does cp do when given three or more file names? - Copies the first text file listed into the second text file listed into the third text file listed, this all remains in the current directory
 ```
 $ ls -F
 ```
@@ -206,9 +207,9 @@ $ cp amino-acids.txt animals.txt morse.txt
 Before heading off to another field trip, she wants to back up her data and send some datasets to her colleague Bob. Sam uses the following commands to get the job done:
 ```
 $ cp *dataset* backup/datasets
-$ cp ____calibration____ backup/calibration
-$ cp 2015-____-____ send_to_bob/all_november_files/
-$ cp ____ send_to_bob/all_datasets_created_on_a_23rd/
+$ cp *2015_calibration.txt* backup/calibration
+$ cp *2015-11* send_to_bob/all_november_files/
+$ cp *23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
 ```
 Help Sam by filling in the blanks.
 
@@ -262,7 +263,7 @@ The resulting directory structure should look like this
 $ ls -F
 analyzed/  fructose.dat    raw/   sucrose.dat
 ```
-The fructose.dat and sucrose.dat files contain output from her data analysis. What command(s) covered in this lesson does she need to run so that the commands below will produce the output shown?
+The fructose.dat and sucrose.dat files contain output from her data analysis. What command(s) covered in this lesson does she need to run so that the commands below will produce the output shown? -mv analyzed/raw/fructose.dat  and  -mv analyzed/raw/sucrose.dat 
 ```
 $ ls -F
 analyzed/   raw/
@@ -283,21 +284,26 @@ Assume that the previous experiment is in a folder called ‘2016-05-18’, whic
 
 Which of the following set of commands would achieve this objective? What would the other commands do?
 ```
-$ mkdir 2016-05-20
-$ mkdir 2016-05-20/data
-$ mkdir 2016-05-20/data/processed
-$ mkdir 2016-05-20/data/raw
-$ mkdir 2016-05-20
-$ cd 2016-05-20
-$ mkdir data
-$ cd data
-$ mkdir raw processed
-$ mkdir 2016-05-20/data/raw
-$ mkdir 2016-05-20/data/processed
-$ mkdir 2016-05-20
-$ cd 2016-05-20
-$ mkdir data
-$ mkdir raw processed
+$ mkdir 2016-05-20 --STEP 1 (1)
+$ mkdir 2016-05-20/data --STEP 2 (1)
+$ mkdir 2016-05-20/data/processed --STEP 3 (1)
+$ mkdir 2016-05-20/data/raw --STEP 4 (1)
+
+$ mkdir 2016-05-20 --STEP 1 (2)
+$ cd 2016-05-20 --STEP 2 (2)
+$ mkdir data  --STEP 3 (2)
+$ cd data --STEP 4 (2)
+$ mkdir raw processed --STEP 5 (2)
+
+$ mkdir 2016-05-20/data/raw - This would only work if 2016-05-20/data was already made.
+$ mkdir 2016-05-20/data/processed - This would only work if 2016-05-20 was already made.
+
+$ mkdir 2016-05-20 --STEP 1 (3)
+$ cd 2016-05-20 --STEP 2 (3)
+$ mkdir data --STEP 3 (3)
+$ mkdir raw processed --STEP 4 (3)
+
+There are 3 different procedures that could be taken in order to create the appropriate files and folders.
 ```
 ---
 
@@ -310,14 +316,14 @@ $ mkdir raw processed
 19
 22
 6
-the output is:
+the output is: 22, 19, 10, 6, 2 (Largest to Smallest) 
 
 10
 19
 2
 22
 6
-If we run sort -n on the same input, we get this instead:
+If we run sort -n on the same input, we get this instead: 2, 6, 10, 19, 22 (Smallest to Largest)
 
 2
 6
@@ -325,14 +331,14 @@ If we run sort -n on the same input, we get this instead:
 19
 22
 
-Explain why -n has this effect.
+Explain why -n has this effect. - " -n" indicates that the numbers need to be displayed in number order (least to greatest)
 
 2. In our current directory, we want to find the 3 files which have the least number of lines. Which command listed below would work?
 ```
 wc -l * > sort -n > head -n 3
 wc -l * | sort -n | head -n 1-3
 wc -l * | head -n 3 | sort -n
-wc -l * | sort -n | head -n 3
+wc -l * | sort -n | head -n 3 ---CORRECT
 ```
 
 3. The command uniq removes adjacent duplicated lines from its input. For example, the file 'data-shell/data/salmon.txt' contains:
@@ -351,16 +357,15 @@ steelhead
 coho
 steelhead
 ```
-Why do you think uniq only removes adjacent duplicated lines? (Hint: think about very large data sets.) What other command could you combine with it in a pipe to remove all duplicated lines?
-
+Why do you think uniq only removes adjacent duplicated lines? (Hint: think about very large data sets.) What other command could you combine with it in a pipe to remove all duplicated lines? - Data that is not duplicated adjacently could represent important data that should be repeated to represent an additional variable, participant, etc. A command which could potentially eliminate all duplicates could be... uniq salmon.txt | data-shell/data/salmon.txt
 
 4. A file called animals.txt (in the data-shell/data folder) contains the following data:
 ```
 2012-11-05,deer
 2012-11-05,rabbit
-2012-11-05,raccoon
-2012-11-06,rabbit
-2012-11-06,deer
+2012-11-05,raccoon --3
+2012-11-06,rabbit --2
+2012-11-06,deer --1
 2012-11-06,fox
 2012-11-07,rabbit
 2012-11-07,bear
@@ -372,7 +377,7 @@ $ cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt
 ```
 Hint: build the pipeline up one command at a time to test your understanding
 
-
+File will have lines 5, 4, and 3
 
 5. For the file animals.txt from the previous exercise, the command:
 ```
@@ -390,9 +395,7 @@ rabbit
 bear
 ```
 
-What other command(s) could be added to this in a pipeline to find out what animals the file contains (without any duplicates in their names)?
-
-
+What other command(s) could be added to this in a pipeline to find out what animals the file contains (without any duplicates in their names)? - Add | ls -l to the command function to find additional duplicates
 
 6. The file animals.txt contains 8 lines of data formatted as follows:
 ```
@@ -409,7 +412,7 @@ grep {deer, rabbit, raccoon, deer, fox, bear} animals.txt | wc -l
 sort animals.txt | uniq -c
 sort -t, -k2,2 animals.txt | uniq -c
 cut -d, -f 2 animals.txt | uniq -c
-cut -d, -f 2 animals.txt | sort | uniq -c
+cut -d, -f 2 animals.txt | sort | uniq -c  ---CORRECT
 cut -d, -f 2 animals.txt | sort | uniq -c | wc -l
 ```
 ---
@@ -418,18 +421,18 @@ cut -d, -f 2 animals.txt | sort | uniq -c | wc -l
 
 1. Wildcard expressions can be very complex, but you can sometimes write them in ways that only use simple syntax, at the expense of being a bit more verbose. Consider the directory `data-shell/north-pacific-gyre/2012-07-03`: the wildcard expression ` \*[AB].txt`  matches all files ending in A.txt or B.txt. Imagine you forgot about this.
 
-Can you match the same set of files with basic wildcard expressions that do not use the [ ] syntax? Hint: You may need more than one expression.
+Can you match the same set of files with basic wildcard expressions that do not use the [ ] syntax? Hint: You may need more than one expression. - \*A.txt \*B.txt
 
-The expression that you found and the expression from the lesson match the same set of files in this example. What is the small difference between the outputs?
+The expression that you found and the expression from the lesson match the same set of files in this example. What is the small difference between the outputs? -The data comes up in separate commands, therefore the data is shown separately and is not listed together
 
-Under what circumstances would your new expression produce an error message where the original one would not?
+Under what circumstances would your new expression produce an error message where the original one would not? - Incorrectly typed, * not placed before the "A.txt" or "B.txt", If there are no "A.txt" or "B.txt", an error will be given whereas if run together, the command would still push.
 
 2. Suppose you want to delete your processed data files, and only keep your raw files and processing script to save storage. The raw files end in .dat and the processed files end in .txt. Which of the following would remove all the processed data files, and only the processed data files?
 ```
 rm ?.txt
-rm \*.txt
+rm \*.txt ---CORRECT
 rm \* .txt
-rm \*.\*
+rm \*.\* 
 ```
 
 ___

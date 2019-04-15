@@ -1,0 +1,70 @@
+  995  cd introscicomp2014/
+  996  ls
+  997  cd UNIX/
+  998  ls
+  999  cd Data/
+ 1000  ls
+ 1001  cd $HOME
+ 1002  ls
+ 1003  cd second-assignment-jordannholmes/
+ 1004  ls
+ 1005  nano For_Daniel_Darwin_Commands 
+ 1006  nano For_Daniel_F
+ 1007  nano For_Daniel_find.txt 
+ 1008  nano For_Daniel_grep.txt 
+ 1009  nano For_Daniel_Wildcard.txt 
+ 1010  nano For_Daniel_realData.txt 
+ 1011  mv For_Daniel_realData.txt For_Daniel_realData_Temperature.txt
+ 1012  ls
+ 1013  cd $HOME
+ 1014  cd
+ 1015  ls
+ 1016  cd introscicomp2014/
+ 1017  ls
+ 1018  cd UNIX/
+ 1019  cd Data/
+ 1020  ls
+ 1021  mv otoos10_new.txt /u/home/class/c177/c177-12/second-assignment-jordannholmes
+ 1022  cd $HOME
+ 1023  cd second-assignment-jordannholmes/
+ 1024  ls
+ 1025  cd ../
+ 1026  cd introscicomp2014/
+ 1027  ls
+ 1028  cd UNIX/
+ 1029  ls
+ 1030  cd Sandbox/
+ 1031  ls
+ 1032  cd ../
+ 1033  cd Data/
+ 1034  ls
+ 1035  cd fasta/
+ 1036  ls
+ 1037  nano For_Daniel_realData.txt 
+ 1038  nano 
+ 1039  head -n3 407228326.fasta
+ 1040  wc -l *.fasta
+ 1041  tial -n+2 4072288326.fasta
+ 1042  tail -n+2 407228326.fasta
+ 1043  tail -n+2 407228326.fasta | tr -d "\n"
+ 1044  tail -n+2 407228326.fasta | tr -d "\n" | wc -c
+ 1045  tail -n+2 407228412.fasta | tr -d "\n" | wc -c
+ 1046  tai -n2 E.coli.fasta | tr -d "\n" \ wc -c
+ 1047  trail -n+2 E.coli.fasta | tr -d "\n" | wc -c
+ 1048  tail -N+2 E.coli.fasta | tr -d "\n" | wc -c
+ 1049  tail n+2 E.coli.fasta | tr -d "\n" | wc -c
+ 1050  tail -n+2 E.coli.fasta | tr -d "\n" | wc -c
+ 1051  tail -n+2 407228326.fasta | tr -d "\n" | grep - o "ATGTACATA"
+ 1052  tail -n+2 407228326.fasta | tr -d "\n" | grep -o "ATGTACATA"
+ 1053  tail -n+2 E.coli.fasta |tr -d "\n" | grep-o ATC | wc -1
+ 1054  tail -n+2 E.coli.fasta | tr -d "\n" | grep-o ATC | wc -l
+ 1055  tail -n+2 E.coli.fasta |tr -d "\n" | grep -o ATC | wc -1
+ 1056  tail -n+2 E.coli.fasta | tr -d "\n" | grep -o ATC | wc l
+ 1057  tail -n+2 E.coli.fasta | tr -d "\n" | grep -o ATC | wc- l
+ 1058  tail -n+2 E.coli.fasta | tr -d "\n" | grep -o ATC | wc -l
+ 1059  tail -n+2 E.coli.fasta | tr -d "\n" | grep -o ATGC | wc -l
+ 1060  tail -n+2 E.coli.fasta | re -d "\n" | grep -o [A,T] | wc -1
+ 1061  tail -n+2 E.coli.fasta | re -d "\n" | grep -o [A,T] | wc -l
+ 1062  tail -n+2 E.coli.fasta | tr -d "\n" | grep -o [A,T] | wc -l
+ 1063  tail -n+2 E.coli.fasta | tr -d "\n" | grep -o [G,C]| wc -l
+ 1064  history | tail -n 70 > For_Daniel_realDataFASTA.txt

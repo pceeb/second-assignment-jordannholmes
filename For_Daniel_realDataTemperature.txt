@@ -1,0 +1,70 @@
+ 1020  ls
+ 1021  cd UNIX/
+ 1022  ls
+ 1023  cd Sandbox/
+ 1024  ls
+ 1025  cd TestDirectory/
+ 1026  ls
+ 1027  cd ../
+ 1028  cd TestFind
+ 1029  ls
+ 1030  nano For_Daniel_find.txt 
+ 1031  pwd
+ 1032  cd $HOME
+ 1033  ls
+ 1034  cd second-assignment-jordannholmes/
+ 1035  ls
+ 1036  pwd
+ 1037  cd $HOME
+ 1038  ls
+ 1039  cd introscicomp2014/
+ 1040  ls
+ 1041  cd UNIX/
+ 1042  ls
+ 1043  cd Sandbox/
+ 1044  ls
+ 1045  cd TestFind/
+ 1046  ls
+ 1047  mv For_Daniel_find.txt /u/home/class/c177/c177-12/second-assignment-jordannholmes
+ 1048  cd $HOME
+ 1049  ls
+ 1050  cd second-assignment-jordannholmes/
+ 1051  ls
+ 1052  cd ../
+ 1053  cd introscicomp2014/
+ 1054  ls
+ 1055  cd UNIX/
+ 1056  ls
+ 1057  cd Sandbox/
+ 1058  ls
+ 1059  cd TestWild/
+ 1060  ls
+ 1061  mv For_Daniel_grep.txt /u/home/class/c177/c177-12/second-assignment-jordannholmes
+ 1062  mv For_Daniel_Wildcard.txt /u/home/class/c177/c177-12/second-assignment-jordannholmes
+ 1063  cd $HOME
+ 1064  ls
+ 1065  cd second-assignment-jordannholmes/
+ 1066  ls
+ 1067  rm -i Due_4-15-19.md
+ 1068  ls
+ 1069  nano Due_4-15-19.md.save
+ 1070  nano Due_4-15-19.md.save.save 
+ 1071  rm -i Due_4-15-19.md.save
+ 1072  ls
+ 1073  cd file_system.png 
+ 1074  nano file_system.png 
+ 1075  ls
+ 1076  cd $HOME
+ 1077  ls
+ 1078  cd introscicomp2014/
+ 1079  ls
+ 1080  cd U
+ 1081  cd UNIX/
+ 1082  cd Data/
+ 1083  ls
+ 1084  cd Temperatures/
+ 1085  ls
+ 1086  grep -n 1800 *.csv | grep -w "TMAX" | grep -w "18000101
+grep -n 180[0-3] *csv | grep -w "180[0-3]0101,TMAX"
+ 1087  grep -n 180[0-3] *csv | grep -w "180[0-3]0101,TMAX"
+ 1088  history | tail -n 70 > For_Daniel_realData.txt
