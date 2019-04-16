@@ -1,0 +1,10 @@
+ 1001  cd UNIX/
+ 1002  ls
+ 1003  cd Data/
+ 1004  ls
+ 1005  cd Temperatures/
+ 1006  ls
+ 1007  grep -i -w "TMAX" 1800.csv | grep "1800101" | cut -d "," -f4 | sort -n | tail -n1
+ 1008  grep -i -w "TMAX" 1800.csv | grep "1800105" | cut -d "," -f4 | sort -n | tail -n1
+ 1009  grep -i -w "TMAX" 1800.csv | grep "1800205" | cut -d "," -f4 | sort -n | tail -n1
+ 1010  history | tail -n 10 > For_Daniel_TemperatureBonus.txt
