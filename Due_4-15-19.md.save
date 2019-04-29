@@ -23,9 +23,9 @@ ___
 
 4. Starting from /Users/amanda/data, which of the following commands could Amanda use to navigate to her home directory, which is /Users/amanda?  Indicate what each command does.
 ````
-$ cd . - Takes you to a directory named ., if applicable - Otherwise nothing
-$ cd / - Takes you to a directory named /, if applicable - Otherwise nothing
-$ cd /home/amanda - Takes you to the home directory, where she wants to be based on the question --CORRECT
+$ cd . - Takes you to a directory named ., if applicable - Otherwise nothing # Acatually, keeps you in the same directory
+$ cd / - Takes you to a directory named /, if applicable - Otherwise nothing # Acatually, takes you to the root directory
+$ cd /home/amanda - Takes you to the home directory, where she wants to be based on the question --CORRECT # Yes username home directory in this case Amanda's
 $ cd ../.. - Takes you to the class directory, if applicable in the individual's directory
 $ cd ~ - Takes you to the home directory, where she wants to be based on the question ---CORRECT
 $ cd home - Takes you to a directory named home, if applicable - Otherwise, nothing
